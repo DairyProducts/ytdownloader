@@ -23,9 +23,10 @@ errlbl.place(y=120)
 
 # Video download function and error reporting
 def clicked():
+        lbl.config(text="Downloading...", fg="yellow")
         filepath = filedialog.askdirectory()
         url = urlinput.get()
-        lbl.config(text="Downloading...", fg="yellow")
+        
         try:
                 # Download the video
                 yt = YouTube(url)
